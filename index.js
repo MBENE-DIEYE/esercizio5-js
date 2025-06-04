@@ -1,13 +1,27 @@
-// ----------------------------------gestire i cookies-----------------------
-function cookies(name,value){
-    const d = new Date();
-    d.setTime(d.getTime() + 24*60*60*1000);
-    let expires= "expire="+ d.toUTCString();
-    document.cookies = name + "=" +value +";" + expires +"; path=/";
-}
+// -------------------------oggetto document---------------------------------
 
-cookies("mio-dato-locale" ,"leremispus");
-console.log("cookies:",document.cookies)
+const paragrafo = document.getElementsByTagName("p");
+console.log(paragrafo);
+
+// -----------------------getElementById-----------------------
+
+const title = document.getElementById("title")
+console.log(title)
+
+// --------------------queryselector----------------------
+const span = document.querySelector(".span")
+console.log(span)
+
+// ----------------------------------gestire i cookies-----------------------
+// function cookies(name,value){
+//     const d = new Date();
+//     d.setTime(d.getTime() + 24*60*60*1000);
+//     let expires= "expire="+ d.toUTCString();
+//     document.cookies = name + "=" +value +";" + expires +"; path=/";
+// }
+
+// cookies("mio-dato-locale" ,"leremispus");
+// console.log("cookies:",document.cookies)
 
 // ----------------------------utilisare il local storage-----------------------
 
@@ -40,6 +54,7 @@ elementPizza2.innerText = pizzaname1
 // -----------------------------utilisare local storage e session storage insieme-----------------------------
 
 const elementBtn3 = document.getElementById("btn3")
+// console.log(elementBtn3)
 const elementPizza1 = document.getElementById("pizza")
 
 elementBtn3.addEventListener("click",()=>{
@@ -54,3 +69,6 @@ const myPizzaName = localStorage.getItem("my prefered") ||"";
 elementPizza1.innerText = myPizza
 const myPizzaName1 = sessionStorage.getItem("my prefered") ||"";
 elementPizza.innerText = myPizza
+
+
+
