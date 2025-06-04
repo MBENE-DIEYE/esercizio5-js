@@ -15,6 +15,18 @@ console.log(span)
 
 const paragrafo = document.querySelector(".p1")
 paragrafo.innerText ="test modificato"
+paragrafo.style.backgroundColor = "red"; 
+paragrafo.style.fontSize = "20px";
+// modifica html
+paragrafo.innerHTML = "<span> sono una span </span>"
+console.log(paragrafo)
+
+
+// -------------------------------------------------------------------------------------------------
+// ------------------------------------------  4 PRIMI ESERCIZI------------------------------
+
+
+
 
 // ----------------------------------gestire i cookies-----------------------
 // function cookies(name,value){
