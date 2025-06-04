@@ -26,13 +26,31 @@ elementPizza.innerText = pizzaname
 // ------------------------------------utilisare session storage ------------------------
 
 const elementBtn1 = document.getElementById("btn1")
-const elementPizza = document.getElementById("pizza")
+const elementPizza2 = document.getElementById("pizza")
 
 elementBtn1.addEventListener("click",()=>{
     const pizzaname1 =prompt("quale la tua pizza preferita?")
     sessionStorage.setItem("mia preferita è ",pizzaname1)
-    elementPizza.innerText = pizzaname1
+    elementPizza2.innerText = pizzaname1
 })
 
 const pizzaname1=sessionStorage.getItem("mia preferita") || "";
-elementPizza.innerText = pizzaname1
+elementPizza2.innerText = pizzaname1
+
+// -----------------------------utilisare local storage e session storage insieme-----------------------------
+
+const elementBtn3 = document.getElementById("btn3")
+const elementPizza1 = document.getElementById("pizza")
+
+elementBtn3.addEventListener("click",()=>{
+    const myPizza = prompt("my pizza prefered")
+    localStorage.setItem("my prefered è:",myPizza)
+    elementPizza1.innerText = myPizza
+    sessionStorage.setItem("my pizza prefered è:",myPizza)
+    elementPizza.innerText= myPizza
+})
+
+const myPizzaName = localStorage.getItem("my prefered") ||"";
+elementPizza1.innerText = myPizza
+const myPizzaName1 = sessionStorage.getItem("my prefered") ||"";
+elementPizza.innerText = myPizza
