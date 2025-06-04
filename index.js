@@ -1,7 +1,6 @@
 // -------------------------oggetto document---------------------------------
 
-const paragrafo = document.getElementsByTagName("p");
-console.log(paragrafo);
+// console.log(document)
 
 // -----------------------getElementById-----------------------
 
@@ -11,6 +10,11 @@ console.log(title)
 // --------------------queryselector----------------------
 const span = document.querySelector(".span")
 console.log(span)
+
+// --------------------modificare il testo di un paragrafo---------------------------
+
+const paragrafo = document.querySelector(".p1")
+paragrafo.innerText ="test modificato"
 
 // ----------------------------------gestire i cookies-----------------------
 // function cookies(name,value){
