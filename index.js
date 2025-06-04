@@ -22,3 +22,17 @@ elementBtn.addEventListener("click",()=>{
 
 const pizzaname=localStorage.getItem("mia preferita") || "";
 elementPizza.innerText = pizzaname
+
+// ------------------------------------utilisare session storage ------------------------
+
+const elementBtn1 = document.getElementById("btn1")
+const elementPizza = document.getElementById("pizza")
+
+elementBtn1.addEventListener("click",()=>{
+    const pizzaname1 =prompt("quale la tua pizza preferita?")
+    sessionStorage.setItem("mia preferita è ",pizzaname1)
+    elementPizza.innerText = pizzaname1
+})
+
+const pizzaname1=sessionStorage.getItem("mia preferita") || "";
+elementPizza.innerText = pizzaname1
