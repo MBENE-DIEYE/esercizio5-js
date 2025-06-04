@@ -9,4 +9,16 @@ function cookies(name,value){
 cookies("mio-dato-locale" ,"leremispus");
 console.log("cookies:",document.cookies)
 
-// ----------------------------
+// ----------------------------utilisare il local storage-----------------------
+
+const elementBtn = document.getElementById("btn")
+const elementPizza = document.getElementById("pizza")
+
+elementBtn.addEventListener("click",()=>{
+    const pizzaname =prompt("quale la tua pizza preferita?", "Pizza")
+    localStorage.setItem("mia preferita è ",pizzaname)
+    elementPizza.innerText = pizzaname
+})
+
+const pizzaname=localStorage.getItem("mia preferita") || "";
+elementPizza.innerText = pizzaname
