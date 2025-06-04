@@ -21,6 +21,18 @@ paragrafo.style.fontSize = "20px";
 paragrafo.innerHTML = "<span> sono una span </span>"
 console.log(paragrafo)
 
+// --------------------------------createElement---------------------
+
+const elementUl = document.getElementsByTagName("ul")
+const button = document.getElementById("button")
+
+button.addEventListener("click",()=>{
+    const menu_text= prompt ("list","menu..")
+const elementLi = document.createElement("li")
+elementLi.innerText = menu_text
+elementUl.appendChild(elementLi)
+})
+
 
 // -------------------------------------------------------------------------------------------------
 // ------------------------------------------  4 PRIMI ESERCIZI------------------------------
