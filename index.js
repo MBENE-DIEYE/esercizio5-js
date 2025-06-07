@@ -115,7 +115,12 @@ array.forEach((item)=>{
 
 const form = document.querySelector(".form")
 const btnSubmit = document.querySelector(".submit")
+const nome =document.querySelector("#nome")
+const cognome =document.querySelector("#cognome")
 
-btnSubmit.addEventListener("click",()=>{
-    
+btnSubmit.addEventListener("click",(event)=>{
+    if(!nome || !cognome){
+        alert("i campi non sono compilati")
+        event.preventDefault()
+    } 
 })
