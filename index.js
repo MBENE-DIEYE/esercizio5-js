@@ -121,6 +121,5 @@ const cognome =document.querySelector("#cognome")
 btnSubmit.addEventListener("click",(event)=>{
     if(!nome || !cognome){
         alert("i campi non sono compilati")
-        event.preventDefault()
     } 
 })
